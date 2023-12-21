@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userPortrait</title>
+    <script>
+        const year = prompt("Введи свій рік народження:");
+        const city = prompt("З якого ти міста?");
+        const sport = prompt("Введи свій улюблений вид спорту :");
+        let message1, message2, message3;
+
+        function calcYear() {
+            if (year === null) {
+                message1 = "Шкода, що ти не захотів ввести свій рік народження :(";
+            } else {
+                message1 = `Круто! Ти народився: ${year} року`;
+            }
+        }
+
+        function calcCity() {
+            if (city === null) {
+                message2 = "Шкода, що ти не захотів ввести своє місто:("
+            } else if (city.toLowerCase() === "київ") {
+                message2 = "Ти живеш у столиці України!";
+            } else if (city.toLowerCase() === "вашингтон") {
+                message2 = "Ти живеш у столиці США!";
+            } else if (city.toLowerCase() === "лондон") {
+                message2 = "Ти живеш в столиці Великобританії!";
+            } else {
+                message2 = `Ти живеш у місті ${city}`;
+            }
+        }
+
+        function calcSport() {
+            if (sport === null) {
+                message3 = "Шкода, що ти не захотів ввести свій улюблений вид спорту:("
+            } else if (sport === "футбол") {
+                message3 = "Круто! Хочеш грати як Кріштік?";
+            } else if (sport === "теніс") {
+                message3 = "Круто! Хочеш грати як Джоковіч?";
+            } else if (sport === "баскетбол") {
+                message3 = "Круто! Хочеш грати як Джордан?)";
+            } else {
+                message3 = `ОГО! Бажаю відмінних результатів і стати кращим у ${sport}`;
+            }
+        }
+
+        calcYear();
+        calcCity();
+        calcSport();
+
+        alert(`${message1} \n ${message2} \n ${message3}`)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
